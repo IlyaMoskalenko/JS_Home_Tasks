@@ -1,0 +1,39 @@
+html {
+ 	height: 640px;
+  	margin: 0;
+  	padding: 0;
+}
+
+body{
+	display: flex;
+	flex-direction: row-reverse;
+	color: white;
+	height: 100%;
+	text-align: center;
+	font-family: Courier New, Courier, monospace; 
+	background: rgba(200,200,200,1);
+	align-items: flex-end;
+}
+
+#container{
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+	align-items: flex-end; 
+	padding: 10px;
+	height: 62%;
+	width: 320px;
+}
+
+.notice{
+	line-height: 350%;
+	margin-bottom: 10px; 
+	display: inline-block;
+	background: rgba(26,30,36,0.7);
+	border: 1px solid rgba(26,30,36,0.1);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+	border-radius: 5px;
+	height: 120px;
+	width: 320px;
+}

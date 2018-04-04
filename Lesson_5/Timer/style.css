@@ -1,0 +1,35 @@
+html {
+  height:100%;
+}
+
+body{
+	color: white;
+	height: 100%;
+	text-align: center;
+	font-family: 'Cinzel', serif; 
+	background: linear-gradient(to top left, rgba(10,20,30,1), rgba(97,101,107,0.7));
+}
+
+h1{
+	opacity: 0.5;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+h1:hover{
+	opacity: 1;
+	transition: 0.5s opacity ease-in-out;
+}
+
+div{
+	opacity: 0.5;
+	font-size: 50px;
+	transition: 0.5s opacity ease-in-out, 0.5s border ease-in-out;
+	cursor: pointer;
+}
+
+div:hover{
+	opacity: 1;
+	border: 1px solid;
+	border-radius: 5px;
+}

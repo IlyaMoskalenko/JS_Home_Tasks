@@ -9,13 +9,44 @@ var getInfo = function(){
 	var BrowserEngine = (navigator.product).toString();
 	var AppVersion = (navigator.appVersion).toString();
 
-	console.log("AppName: ", AppName);
-	console.log("AppCodeName: ", AppCodeName);
-	console.log("Platform: ", Platform)
-	console.log("Cookies: ", Cookies);
-	console.log("Language: ", Language);
-	console.log("BrowserEngine: ", BrowserEngine);
-	console.log("AppVersion: ", AppVersion);
+	// console.log("AppName: ", AppName);
+	// console.log("AppCodeName: ", AppCodeName);
+	// console.log("Platform: ", Platform)
+	// console.log("Cookies: ", Cookies);
+	// console.log("Language: ", Language);
+	// console.log("BrowserEngine: ", BrowserEngine);
+	// console.log("AppVersion: ", AppVersion);
+
+	document.write("<table>\
+					  <tr>\
+					    <td>AppName: </td>\
+					    <td>" + AppName + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>AppCodeName: </td>\
+					    <td>" + AppCodeName + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>Platform: </td>\
+					    <td>" + Platform + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>Cookies: </td>\
+					    <td>" + Cookies + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>Language: </td>\
+					    <td>" + Language + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>BrowserEngine: </td>\
+					    <td>" + BrowserEngine + "</td>\
+					  </tr>\
+					  <tr>\
+					    <td>AppVersion: </td>\
+					    <td>" + AppVersion + "</td>\
+					  </tr>\
+					</table>")
 }
 
 window.getInfo();
@@ -48,7 +79,7 @@ var r = /\+?\d{3}((\-\d{2}\-)|(\s\d{2}\s)|(\(\d{2}\))|(\d{2}))\d{3}[(\s)|(\-)]?\
 // console.log(str5_1.match(r));
 // console.log(str5_2.match(r));
 // console.log(str5_3.match(r));
-	return str.match(r);
+	return (str.match(r) != null) ? "Successful!" : "Wrong number!";
 }
 
-window.numMatch();
+alert(numMatch());

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Validation</title>
+</head>
+<body>
+	<div class="container">
+		<p>Введите необходимые данные</p>
+		<form id="myForm">
+			<input id="Name" type="text" name="username" placeholder="Name" required>
+			<span id="sName">Wrong name!</span>
+
+			<input id="Phone" type="text" name="phone" placeholder="Phone number" required>
+			<span id="sPhone">Wrong number!</span>
+
+			<input id="Email" type="text" name="email" placeholder="Email" required>
+			<span id="sEmail">Wrong email!</span>
+
+			<input id="Site" type="text" name="site" placeholder="Site" required>
+			<span id="sSite">Wrong site!</span>
+
+			<input id="Age" type="text" name="age" placeholder="Age" required>
+			<span id="sAge">Wrong age!</span>
+
+			<button form="myForm" id="submit">Готово</button>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

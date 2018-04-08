@@ -1,0 +1,19 @@
+.container{
+	text-align: center;
+	height: 270px;
+	width: 100%;
+}
+
+textarea{
+	width: 250px;
+	height: 100px;
+}
+
+.cCode, .cDecode{
+	display: inline-block;
+	width: 310px;
+}
+
+button{
+	margin: 5px;
+}

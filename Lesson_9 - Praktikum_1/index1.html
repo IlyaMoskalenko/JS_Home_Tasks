@@ -1,0 +1,82 @@
+<!-- ////////////////////////////////////////////////////
+//////////////////_____ПРАКТИКУМ_____////////////////////
+///////////////////////////////////////////////////////// -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Практикум</title>
+</head>
+<body>
+<div id="cover">
+	<div id="confirm">
+		<h4>Подтвердите Ваш заказ</h4>
+		<p>Заполните необходимые поля:</p>
+		<hr>
+		<input id="name" type="text" placeholder="Имя">
+		<input id="adress" type="text" placeholder="Адрес">
+		<input id="phone" type="text" placeholder="Телефон(моб)">
+		<hr>
+		<button id="ready">Готово</button>
+	</div>
+</div>
+	<div id="wrap">
+		
+		<div id="header">
+			<h4>Выберите цветы</h4>
+		</div>
+		
+		<div id="stop">
+		
+		</div>
+
+		<div id="flowers">
+			<div class="flower" name="f" ><img class="imgflower" src="розы.jpg">розы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="тюльпаны.jpg">тюльпаны</div>
+			<div class="flower" name="f" ><img class="imgflower" src="нарциссы.jpg">нарциссы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="лилии.jpg">лилии</div>
+			<div class="flower" name="f" ><img class="imgflower" src="хризантемы.jpg">хризантемы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="гвоздики.jpg">гвоздики</div>
+		</div>
+
+		<div id="form">
+			<div id="amount">
+				<p>Цветов в букете:</p>
+				<input type="text" id="iamount" value="0">
+			</div>
+
+			<div id="pack">
+				<p>Упаковка:</p>
+				<p><input name="p" type="radio" value="0" checked>Без упаковки - 0p</p>
+				<p><input name="p" type="radio" value="2">Бумага - 2p</p>
+				<p><input name="p" type="radio" value="3">Фольга - 3p</p>
+			</div>
+			
+			<div id="delivery">
+				<p>Доставка:</p>
+				<select id="sdelivery">
+					<option value="3">Курьером - 3p</option>
+					<option value="0">Без доставки - 0p</option>
+					<option value="4">Курьером к получателю - 4p</option>
+				</select>
+			</div>
+
+			<div id="total">
+				<p>Итого:</p>
+				<input type="text" id="itotal" value="0">
+			</div>
+
+			<div id="submit">
+				<button>Заказать</button>
+			</div>
+
+		</div>
+
+	</div>
+
+<script type="text/javascript" src="script.js" ></script>
+
+</body>
+</html>

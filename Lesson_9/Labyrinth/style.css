@@ -1,0 +1,43 @@
+body,div,p,tr,td {
+	margin: 0;
+	padding: 0;
+}
+
+td{
+	width: 8px;
+	height: 8px;
+}
+
+table{
+	margin: auto;
+	border: 3px solid black;
+	border-collapse: separate;
+    border-spacing: 0;
+}
+
+#wrap{
+	width: 100%;
+}
+
+#labyrinth{
+	margin: auto;
+}
+
+.wall{
+	/*color: white;*/
+	background: black;
+}
+
+.way{
+	/*color: white;*/
+	background: white;
+}
+
+.player{
+	border-radius: 50%;
+	background: blue;
+}
+
+.destination{
+	background: green;
+}

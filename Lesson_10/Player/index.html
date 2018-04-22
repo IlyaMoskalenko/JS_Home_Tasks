@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<title>videoPlayer</title>
+</head>
+<body>
+	<div id="wrap">
+		<video id="video" src="EMIT__Connections_Plexus.mov"></video>
+		<div id="player" class="hidePlayer">
+			<button id="playPause" class="btn"><i id="iPlayPause" class="material-icons">play_arrow</i></button>
+			<button id="stop" class="btn"><i id="iStop" class="material-icons">stop</i></button>
+			<button id="slow" class="btn"><i id="iSlow" class="material-icons">fast_rewind</i></button>
+			<button id="fast" class="btn"><i id="iFast" class="material-icons">fast_forward</i></button>
+			<button id="loop" class="btn"><i id="iLoop" class="material-icons">loop</i></button>
+			<button id="mute" class="btn"><i id="iMute" class="material-icons">volume_up</i></button>
+			<input id="fader" type="range" min="0" max="100" step="1" value="100"></input>
+			<progress id="progressBar" value="0" max="100"></progress>
+			<div id="time"></div>
+		</div>
+	</div>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

@@ -85,12 +85,12 @@ var iSlow = document.getElementById("iSlow");
 
 	fast.addEventListener("click",function(){
 		video.playbackRate *= 2;
-		alert(video.playbackRate)
+		// alert(video.playbackRate)
 	})
 
 	slow.addEventListener("click",function(){
 		video.playbackRate *= 0.5;
-		alert(video.playbackRate)
+		// alert(video.playbackRate)
 	})
 
 	setInterval(function(){
@@ -100,5 +100,16 @@ var iSlow = document.getElementById("iSlow");
 	var time = document.getElementById("time")
 	video.addEventListener("loadedmetadata",function(){
 		setInterval(function(){
-			time.innerText = Math.round(video.currentTime) + "/" + Math.round(video.duration);
+			var sec = video.duration;
+			var current = video.currentTime;
+			var currentSeconds = Math.round(current % 60);
+			if( currentSeconds < 10 ){
+				currentSeconds = '0' + currentSeconds;
+			}
+			if( sec % 60 < 10 ){
+				time.innerText = Math.round(video.currentTime/60) + ":" + currentSeconds + "/" + Math.floor(sec/60) + ":" + '0' +Math.round(sec % 60)
+			}
+			else{
+			time.innerText = Math.round(video.currentTime/60) + ":" + currentSeconds + "/" + Math.floor(sec/60) + ":" + Math.round(sec % 60)
+			}
 		},500)})

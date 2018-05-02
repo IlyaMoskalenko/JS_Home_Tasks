@@ -1,0 +1,11 @@
+<div id="products">
+	<h3>STRINGS BRANDS:</h3>	
+	<div id="brands">		
+	<div class="product" value="Ernie Ball" id="s1">
+	</div>
+	<div class="product" value="Dunlop" id="s2">
+	</div>
+	<div class="product" value="Elixir" id="s3">
+	</div>
+	</div>			
+</div>

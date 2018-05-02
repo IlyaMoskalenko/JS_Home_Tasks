@@ -1,0 +1,168 @@
+<style type="text/css">
+div, p, h4{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#wrap{
+	width: 100%;
+}
+
+#header{
+	background: rgba(250,250,250,1);
+	text-align: center;
+	height: 40px;
+	line-height: 37px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+	margin-bottom: 5px;
+}
+
+#flowers{
+	margin: auto;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	width: 680px;
+}
+
+.flower{
+	border-radius: 3px;
+	text-align: center;
+	width: 202px;
+	height: 240px;
+	background: rgba(189,195,199,0.5);
+	margin: 10px;
+	transition: 0.3s transform;
+}
+
+.flower:hover{
+	transform: scale(1.05);
+}
+
+.imgflower{
+	margin-top: 10px;
+	width: 200px;
+	height: 200px;
+}
+
+#form{
+	margin-top: 5px;
+	background: rgba(250,250,250,1);
+	border-top:  1px solid rgba(0,0,0,0.2);
+	box-shadow: 3px -3px 3px rgba(0,0,0,0.2);
+	display: flex;
+	justify-content: space-around;
+}
+
+#submit{
+	height: 92px;
+	line-height: 95px;
+}
+
+#submit>button{
+	border: 1px solid rgba(200,200,200,1);
+	background: rgba(200,200,200,0.5);
+	padding: 4px 20px;
+	transition: 0.3s background;
+}
+
+#submit>button:hover{
+	background: rgba(250,250,250,1);
+}
+
+.bordered{
+	border: 1px solid #3498DB;
+}
+
+#cover{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+
+#cover.open{
+	display: block;
+}
+
+#confirm{
+	text-align: center;
+	width: 25%;
+	margin: 50px auto;
+	padding: 20px;
+	background: #34495E;
+
+}
+#confirm>input{
+	margin: 5px auto;
+	width: 70%;
+	height: 30px;
+	border-radius: 3px;
+}
+
+#ready{
+	margin: 20px auto 10px auto;
+	width: 30%;
+
+	height: 30px;
+}</style>
+<div id="cover">
+	<div id="confirm">
+		<h4>Подтвердите Ваш заказ</h4>
+		<p>Заполните необходимые поля:</p>
+		<hr>
+		<input id="name" type="text" placeholder="Имя">
+		<input id="adress" type="text" placeholder="Адрес">
+		<input id="phone" type="text" placeholder="Телефон(моб)">
+		<hr>
+		<button id="ready">Готово</button>
+	</div>
+</div>
+	<div id="wrap">
+		<div id="header">
+			<h4>Выберите цветы</h4>
+		</div>
+		<div id="stop">
+		</div>
+		<div id="flowers">
+			<div class="flower" name="f" ><img class="imgflower" src="розы.jpg">розы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="тюльпаны.jpg">тюльпаны</div>
+			<div class="flower" name="f" ><img class="imgflower" src="нарциссы.jpg">нарциссы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="лилии.jpg">лилии</div>
+			<div class="flower" name="f" ><img class="imgflower" src="хризантемы.jpg">хризантемы</div>
+			<div class="flower" name="f" ><img class="imgflower" src="гвоздики.jpg">гвоздики</div>
+		</div>
+		<div id="form">
+			<div id="amount">
+				<p>Цветов в букете:</p>
+				<input type="text" id="iamount" value="0">
+			</div>
+			<div id="pack">
+				<p>Упаковка:</p>
+				<p><input name="p" type="radio" value="0" checked>Без упаковки - 0p</p>
+				<p><input name="p" type="radio" value="2">Бумага - 2p</p>
+				<p><input name="p" type="radio" value="3">Фольга - 3p</p>
+			</div>
+			<div id="delivery">
+				<p>Доставка:</p>
+				<select id="sdelivery">
+					<option value="3">Курьером - 3p</option>
+					<option value="0">Без доставки - 0p</option>
+					<option value="4">Курьером к получателю - 4p</option>
+				</select>
+			</div>
+			<div id="total">
+				<p>Итого:</p>
+				<input type="text" id="itotal" value="0">
+			</div>
+			<div id="submit">
+				<button>Заказать</button>
+			</div>
+		</div>
+	</div>

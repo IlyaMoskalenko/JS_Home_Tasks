@@ -1,0 +1,11 @@
+<div id="products">
+	<h3>PEDALS:</h3>	
+	<div id="brands">		
+	<div class="product" value="Behringer" id="p1">
+	</div>
+	<div class="product" value="Boss" id="p2">
+	</div>
+	<div class="product" value="MXR" id="p3">
+	</div>
+	</div>			
+</div>

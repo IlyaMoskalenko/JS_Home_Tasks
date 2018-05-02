@@ -1,0 +1,13 @@
+<div id="store">			
+				<div id="tabs">
+					<h3>PRODUCTS</h3>
+					<div class="tab" id="t1">GUITARS</div>
+					<div class="tab" id="t2">STRINGS</div>
+					<div class="tab" id="t4">ACCESOIRES</div>
+					<div class="tab" id="t5">PEDALS</div>
+				</div>
+				
+				<div id="container">
+	
+				</div>
+			</div>

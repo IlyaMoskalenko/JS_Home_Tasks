@@ -1,0 +1,14 @@
+#table > tr > td{ 
+	width: 20px;
+	height: 20px;
+	border-bottom: 1px solid rgba(0,0,0,1);
+	border-right: 1px solid rgba(0,0,0,1);
+}
+
+#table > tr:last-child > td {
+	border-bottom: none;
+}
+
+#table > tr > td:last-child {
+	border-right: none;
+}

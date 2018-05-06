@@ -42,4 +42,4 @@ var doRoute = function(){
 	}
 }
 window.addEventListener("hashchange",doRoute);
-doRoute();
+doRoute();	

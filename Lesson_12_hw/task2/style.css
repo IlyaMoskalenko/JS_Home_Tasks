@@ -1,0 +1,37 @@
+#wrap{
+	width: 600px;
+	margin: auto;
+	text-align: center;
+}
+
+#container{
+	padding: 10px;
+	text-align: left;
+	margin: 20px 0;
+	border: 1px solid rgba(0,0,0,0.7);
+	min-height: 300px;
+}
+
+@keyframes r{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(720deg);
+	}
+}
+
+#loader>img{
+	display: inline-block;
+	width: 100%;
+	transform-origin: center;
+}
+
+#loader{
+	display: none;
+	margin: auto;
+	width: 100px;
+	height: 100px;	
+	transform-origin: center;
+	animation: r 4s infinite linear; 
+}

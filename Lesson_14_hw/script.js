@@ -6,139 +6,200 @@ class Task{
 	}
 }
 
-class taskPlan{
+class TaskPlan{
 	constructor(today,tomorrow){
 		var todayList = [];
 		var tomorrowList = [];
-		for(var i = 0; i < today.length; i++){
-			todayList[i] = today[i];
+		for(var t of today){
+			todayList.push(t)
+		}
+		for(var t of tomorrow){
+			tomorrowList.push(t)
 		}
 		this.todayList = todayList;
-
-		for(var j = 0; j < tomorrow.length; j++){
-			tomorrowList[j] = tomorrow[j];
-		}
 		this.tomorrowList = tomorrowList;
-		this.availableActs = ["today","tomorrow","add","delete","priority"]
 	}
-	getList(act, todayOrTomorrow = "whatever"){
-		var args = [];
-			for(var i = 0; i < arguments.length; i++){
-				args[i] = arguments[i];
-			}
-		var tasks = []
-			for(var j = 2; j < args.length; j++){
-				tasks.push(args[j])
-			}
-				for(var a in this.availableActs){
-					if(this.availableActs[a] == args[0]){
-						switch(args[0]){
-							case "today": showTodayList(this); break;
-							case "tomorrow": showTomorrowList(this); break;
-							case "add": addTask(this,args[1],tasks); break;
-							case "delete": deleteTask(tasks,this,args[1]); break;
-							case "priority": showPriority(this,args[1]); break;
-						}
+	getTodayList(){
+		var L = {
+			max: this.todayList.length,
+			tdl: this.todayList,
+			[Symbol.iterator] : function(){
+				var a = 0;
+				var self = this;
+				var iter = {
+					next(){
+						let value = self.tdl[a];
+							a++;
+						let done = a > self.max;
+						return {value, done}
 					}
 				}
+			return iter;
+			}
+		}
+		for(var t of L){
+			console.log(t)
+		}			
 	}
-}
+	getTomorrowList(){
+		var L = {
+			max: this.tomorrowList.length,
+			tml: this.tomorrowList,
+			[Symbol.iterator] : function(){
+				var a = 0;
+				var self = this;
+				var iter = {
+					next(){
+						let value = self.tml[a];
+							a++;
+						let done = a > self.max;
+						return {value, done}
+					}
+				}
+			return iter;
+			}
+		}
+		for(var t of L){
+			console.log(t)
+		}		
+	}
+	addTasks(day){
+		var tasks = [];
+		for(var t of arguments){
+			if(t != "today" && t != "tomorrow"){
+				tasks.push(t);
+			}
+		}
 
-var showTodayList = function(obj){
-	let list = {
-		max: obj.todayList.length,
-		[Symbol.iterator](){
-			var a = 0;
-			var self = this;
-			var iter = {
-				next(){
-					let value = obj.todayList[a];
-						a++;
-					let done = a > self.max;
-					return {value, done}
-				}
+		if(day == "today"){
+			for(var t of tasks){
+				this.todayList.push(t)
 			}
-		return iter;
 		}
-	}
-	for(var t of list){
-		console.log(t)
-	}
-}
-var showTomorrowList = function(obj){
-	let list = {
-		max: obj.tomorrowList.length,
-		[Symbol.iterator](){
-			var a = 0;
-			var self = this;
-			var iter = {
-				next(){
-					let value = obj.tomorrowList[a];
-						a++;
-					let done = a > self.max;
-					return {value, done}
-				}
-			}
-		return iter;
-		}
-	}
-	for(var t of list){
-		console.log(t)
-	}
-}
-var addTask = function(obj,todayOrTomorrow,tasks){
-	for(var j = 0; j < tasks.length; j++){
-		if(tasks[j] != "nothing"){
-			if(todayOrTomorrow == "todayList"){
-				obj.todayList.push(tasks[j]);
-			}
-			if(todayOrTomorrow == "tomorrowList"){
-				obj.tomorrowList.push(tasks[j]);
+		else{
+			for(var t of tasks){
+				this.tomorrowList.push(t)
 			}
 		}
 	}
-}
-var deleteTask = function(tasks,obj,todayOrTomorrow){
-	for(var j = 0; j < tasks.length; j++){
-		if(tasks[j] != "nothing"){
-			if(todayOrTomorrow == "todayList"){
-				obj.todayList.splice(obj.todayList.indexOf(tasks[j]),1);
+	deleteTask(TaskName){
+		for(var t of this.todayList){
+			if(t.name == TaskName){
+				this.todayList.splice(this.todayList.indexOf(t),1)
 			}
-			if(todayOrTomorrow == "tomorrowList"){
-				obj.tomorrowList.splice(obj.tomorrowList.indexOf(tasks[j]),1);
+		}
+		for(var t of this.tomorrowList){
+			if(t.name == TaskName){
+				this.tomorrowList.splice(this.tomorrowList.indexOf(t),1)
 			}
 		}
 	}
-}
-var showPriority = function(obj,todayOrTomorrow){
-	if(todayOrTomorrow == "todayList"){
-		obj.todayList.sort(function(a,b){
-			return a.priority > b.priority;
-		})
-		showTodayList(obj);
+	showPriority(){
+		console.log((this.todayList.concat(this.tomorrowList)).sort(function(a,b){return a.priority > b.priority}));
 	}
-	else if(todayOrTomorrow == "tomorrowList"){
-		obj.tomorrowList.sort(function(a,b){
-			return a.priority > b.priority;
-		})
-		showTomorrowList(obj);
-	}
-	else{
-		console.log("choose list: todayList or tomorrowList")
-	}
-}
+}	
 
 var T1 = new Task("A","1","123");
 var T2 = new Task("B","2","234");
-var T3 = new Task("C","3","345");
+var T3 = new Task("C","7","345");
 var T4 = new Task("D","4","456");
 var T5 = new Task("E","5","567");
+var T6 = new Task("F","6","678");
+var T7 = new Task("G","8","789");
+var T8 = new Task("H","9","890");
+var T9 = new Task("I","3","012");
 
+var plan = new TaskPlan([T1,T2,T4,T6],[T3,T5]);
+// plan.addTasks("tomorrow",T7,T8,T9);
 
-var tList = new taskPlan([T1,T2],[T3]);
-console.log("Список:",tList);
-console.log("Как вызывать:","getList(действие, день(сегодня или завтра) (опционально), заданиЯ(опционально))");
-console.log("Доступные действия:",tList.availableActs);
+class List{
+	constructor(tlist){
+		var setList = new Set();
 
-tList.getList("add","todayList",T4,T5)
-// tList.getList("today","today")
+		for(var t of tlist){
+			setList.add(t)
+		}
+		this.taskList = setList;
+	}
+	show(){
+		for(var t of this.taskList){
+			console.log(t)
+		}			
+	}
+	addTasks(){
+		var tasks = [];
+		for(var t of arguments){
+				this.taskList.push(t);
+		}
+	}
+	deleteTask(Task){
+		this.taskList.delete(Task)
+	}
+}
+
+var list = new List([T7,T8,T9]);
+	// list.show();
+
+function interact(obj){
+
+	var addToday = document.getElementById("add1");
+	var addTomorrow = document.getElementById("add2");
+
+	function show(obj){
+		var todayOl = document.getElementById("today");
+		todayOl.innerHTML = "";
+		for(var t of obj.todayList){
+			var li = document.createElement("li");
+				li.innerText = t.name + ", " + t.priority + ", " + t.endDate;
+			var btn = document.createElement("button")
+				btn.innerText = "delete";
+				btn.setAttribute("id","delete")
+				btn.addEventListener("click",function(e){
+					if(e.target.parentNode.nodeName == "LI"){
+						var str = e.target.parentNode.innerText;
+						obj.deleteTask(str.substring(0,str.indexOf(",")));
+						e.target.parentNode.remove();
+					}
+				})
+				li.appendChild(btn)
+			todayOl.appendChild(li);
+		}
+		var tomorrowOl = document.getElementById("tomorrow");
+		tomorrowOl.innerHTML = "";
+		for(var t of obj.tomorrowList){
+			var li = document.createElement("li");
+				li.innerText = t.name + ", " + t.priority + ", " + t.endDate;
+				var btn = document.createElement("button")
+				btn.innerText = "delete";
+				btn.setAttribute("id","delete");
+				btn.addEventListener("click",function(e){
+					if(e.target.parentNode.nodeName == "LI"){
+						var str = e.target.parentNode.innerText;
+						obj.deleteTask(str.substring(0,str.indexOf(",")));
+						e.target.parentNode.remove();
+					}
+				})
+				li.appendChild(btn);
+			tomorrowOl.appendChild(li);
+		}
+	}
+	show(obj)
+
+	addToday.addEventListener("click",function(){
+		var name = prompt("Введите название задачи");
+		var priority = parseInt(prompt("Введите приоритет задачи"));
+		var endDate = prompt("Введите дату завершения задачи");
+		var newTask = new Task(name,priority,endDate);
+		obj.addTasks("today",newTask);
+		show(obj);
+	})
+	addTomorrow.addEventListener("click",function(){
+		var name = prompt("Введите название задачи");
+		var priority = parseInt(prompt("Введите приоритет задачи"));
+		var endDate = prompt("Введите дату завершения задачи");
+		var newTask = new Task(name,priority,endDate);
+		obj.addTasks("tomorrow",newTask);
+		show(obj);
+	})
+}
+interact(plan)

@@ -1,0 +1,57 @@
+#geneticAlgorithm{
+	display: flex;
+	color: white;
+}
+
+#Origins{
+	background: rgb(26,30,36);
+	overflow: auto;
+	width: 30%;
+	height: 500px;
+}
+
+#Origins > h3, #newGen > h3, #genHistory > h3{
+	text-align: center;
+}
+
+#newGen, #genHistory{
+	background: rgb(26,30,36);
+	overflow: auto;
+	width: 30%;
+	margin-left: 5%;
+	height: 450px;
+}
+
+#panel{
+	background: rgb(26,30,36);
+	margin-top: 30px;
+	height: 70px;
+	line-height: 70px;
+}
+
+#panel > #auto_manual, #new, #speed{
+	color: white;
+	background: rgb(26,30,36);
+	border: 1px solid rgba(50,50,50,1);
+	padding: 10px;
+	margin: 10px;
+	transition: 0.3s border;
+}
+
+#panel >  #auto_manual:hover, #new:hover, #speed:hover{
+	border: 1px solid rgba(100,100,100,1);
+}
+p{
+	margin: 5px 0px;
+	text-align: center;
+}
+
+.done{
+	border: 1px solid rgba(0,150,0,1);
+	background: rgba(0,255,0,1)
+}
+
+#ideal{
+	padding: 10px 20px;
+	margin: 10px;
+}

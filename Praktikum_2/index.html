@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="geneticAlgorithm">
+
+		<div id="Origins">
+			<h3>Исходное поколение:</h3>
+			<ol id="originsUl"></ol>
+		</div>
+
+		<div id="newGen">
+			<h3>Новейшее поколение:</h3>
+			<ol id="newGenUl"></ol>
+		</div>
+
+		<div id="genHistory">
+			<h3>История поколений:</h3>
+			<ol id="genHistoryUl"></ol>
+		</div>
+
+	</div>
+	<div id="panel">
+		<button id="auto_manual">Генерация: Ручная</button>
+		<button id="new">Создать поколение</button>
+		<button id="speed">Скорость: x1</button>
+		<input type="text" id="chance" placeholder="шанс мутации" value="10">
+		<button id="ideal"></button>
+	</div>
+	<div>
+		<p>Для того, чтобы переключить скорость итераций, переключите режим генерации на ручной, затем поменяйте скорость и снова включите режим Авто</p>
+		<p>Среднее время ожидания: 478 поколений</p>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

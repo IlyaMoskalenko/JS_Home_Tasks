@@ -1,0 +1,12 @@
+#content{
+	width: 1000px;
+	height: 650px;
+	margin: auto;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+	cursor: crosshair;
+	background: white
+}
+body{
+	background: linear-gradient(45deg, #1ABC9C, #F1C40F);
+	height: 660px;
+}

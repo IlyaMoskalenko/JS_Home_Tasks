@@ -1,0 +1,12 @@
+.margin{
+	/*margin: 30px 0px;*/
+}
+
+td,th{
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	margin-left: 20px;
+}
+.btn{
+	margin-left: 5px;
+}

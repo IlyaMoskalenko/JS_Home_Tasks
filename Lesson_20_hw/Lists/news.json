@@ -1,0 +1,30 @@
+[
+	{
+
+		"news_1": {
+			"id": 1
+			,"source": "Images/3.jpg"
+			,"name" : "Заголовок1"
+			,"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti delectus quasi recusandae atque labore."
+		}
+		,"news_2": {
+			"id": 2
+			,"source": "Images/1.jpg"
+			,"name" : "Заголовок2"
+			,"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti delectus quasi recusandae atque labore."
+		}
+		,"news_3": {
+			"id": 3
+			,"source": "Images/4.jpg"
+			,"name" : "Заголовок3"
+			,"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti delectus quasi recusandae atque labore."
+		}
+		,"news_4": {
+			"id": 4
+			,"source": "Images/2.jpg"
+			,"name" : "Заголовок4"
+			,"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti delectus quasi recusandae atque labore."
+		}
+
+	}
+]

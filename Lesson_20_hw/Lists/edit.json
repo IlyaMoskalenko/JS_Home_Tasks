@@ -1,0 +1,8 @@
+<div id="edit">
+	<ul>
+		<li><input id="name" type="text" placeholder="введите название"></li>
+		<li><input  id="image" type="file"><button id="load">Load</button></li>
+		<li><textarea id="article"></textarea></li>
+	</ul>
+	<button id="ready">Готово</button>
+</div>

@@ -1,0 +1,26 @@
+#news > li > h3{
+	margin: 10px 20px;
+}
+#news > li > p{
+	margin: 20px 20px;
+	/*padding: 10px;*/
+}
+#news > li > img{
+	width: 100%;
+}
+#news > li > button{
+	float: right;
+}
+#news > li{
+	margin-bottom: 30px;
+	width: 650px;
+	border-bottom: 1px solid rgba(0,0,0,0.7);
+}
+#news{
+	list-style: none;
+}
+
+#edit > ul > li{
+	margin-bottom: 30px;
+	width: 650px;
+}

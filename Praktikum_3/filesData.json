@@ -1,0 +1,81 @@
+{
+	"filesData": [
+		{
+			"id": 1
+			,"Artist": "Bag Raiders"
+			,"Title": "Shooting Stars"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2FBag%20Raiders%20-%20Shooting%20Stars.mp3?alt=media&token=fe59db38-6429-4587-8915-da4f8f47bade"
+			,"size": "3:56"
+		}
+		,{
+			"id": 2
+			,"Artist": "big shaq"
+			,"Title": "the ting go skrrra pap pap ka ka"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Fbig%20shaq%20-%20the%20ting%20go%20skrrra%20pap%20pap%20ka%20ka.mp3?alt=media&token=6ae17673-f999-4951-a4bc-326a8ee3a560"
+			,"size": "1:37"
+		}
+		,{
+			"id": 3
+			,"Artist": "Galactic Empire"
+			,"Title": "The Imperial March"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2FGalactic%20Empire%20-%20The%20Imperial%20March.mp3?alt=media&token=34a828f9-3df1-4528-be31-b32e1cb89956"
+			,"size": "3:08"
+		}
+		,{
+			"id": 4
+			,"Artist": "hot action cop"
+			,"Title": "fever for the flava"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Fhot%20action%20cop%20-%20fever%20for%20the%20flava.mp3?alt=media&token=dff2c75a-3653-47ea-98ff-c997fea031b6"
+			,"size": "4:09"
+		}
+		,{
+			"id": 5
+			,"Artist": "lynyrd skynyrd"
+			,"Title": "sweet home alabama"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Flynyrd%20skynyrd%20-%20sweet%20home%20alabama.mp3?alt=media&token=3e174159-8c4c-4204-8e7d-f049ee9e6946"
+			,"size": "4:47"
+		}
+		,{
+			"id": 6
+			,"Artist": "rick astley"
+			,"Title": "never gonna give you up"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Frick%20astley%20-%20never%20gonna%20give%20you%20up.mp3?alt=media&token=71e5f8c6-31f0-40e4-816c-4ef7e4533a24"
+			,"size": "3:32"
+		}
+		,{
+			"id": 7
+			,"Artist": "shrek"
+			,"Title": "somebody"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Fshrek%20-%20somebody.mp3?alt=media&token=d1c53e9c-36de-4b45-9e99-fa3006a8a34b"
+			,"size": "3:22"
+		}
+		,{
+			"id": 8
+			,"Artist": "the offspring"
+			,"Title": "youre gonna go far kid"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Fthe%20offspring%20-%20youre%20gonna%20go%20far%20kid.mp3?alt=media&token=b4531c19-da24-465c-ac16-06b9c2224536"
+			,"size": "2:58"
+		}
+		,{
+			"id": 9
+			,"Artist": "Unknown"
+			,"Title": "TO BE CONTINUED"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2FTO%20BE%20CONTINUED.mp3?alt=media&token=de6f3bff-2c63-43fb-bd4a-76a1cd88cce4"
+			,"size": "0:15"
+		}
+		,{
+			"id": 10
+			,"Artist": "verka serdyuchka"
+			,"Title": "horosho"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2Fverka%20serdyuchka%20-%20horosho.mp3?alt=media&token=8c0ef4ad-3f90-4490-9837-6dadeb47e66a"
+			,"size": "1:45"
+		}
+		,{
+			"id": 11
+			,"Artist": "Фристайло"
+			,"Title": "Ракамакафо"
+			,"URL": "https://firebasestorage.googleapis.com/v0/b/praktikum-3.appspot.com/o/AudioForPraktikum3%2F%D0%A4%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%B9%D0%BB%D0%BE%20-%20%D0%A0%D0%B0%D0%BA%D0%B0%D0%BC%D0%B0%D0%BA%D0%B0%D1%84%D0%BE.mp3?alt=media&token=b71c89f7-590f-4b42-b57e-bd21e6d98eef"
+			,"size": "2:50"
+		}
+	]
+}

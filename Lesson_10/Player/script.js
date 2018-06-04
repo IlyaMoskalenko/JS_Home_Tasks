@@ -98,7 +98,7 @@ var iSlow = document.getElementById("iSlow");
 	},10)
 
 	var time = document.getElementById("time")
-	video.addEventListener("loadedmetadata",function(){
+	audio.addEventListener("loadedmetadata",function(){
 		setInterval(function(){
 			var sec = video.duration;
 			var current = video.currentTime;

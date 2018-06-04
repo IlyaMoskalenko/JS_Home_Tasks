@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="vue.min.js"></script>
+	
+
+	<title>Audio service</title>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBgQqmOqf_OhP2SVWJgGah5JIiS49-6wkY",
+    authDomain: "praktikum-3.firebaseapp.com",
+    databaseURL: "https://praktikum-3.firebaseio.com",
+    projectId: "praktikum-3",
+    storageBucket: "praktikum-3.appspot.com",
+    messagingSenderId: "952449681522"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+</head>
+<body>
+	
+	<!-- ///////////////////////// -->
+	<!-- /// Начало приложения /// -->
+	<!-- ///////////////////////// -->
+
+	<div id="app" v-cloak>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>	
+
+		<div id="wrap">
+			
+			<!-- main page -->
+
+			<nav id="header">
+
+				<div id="player">
+
+					<audio id="audio">
+						<source id="source" src="" type="audio/mpeg">
+					</audio>
+
+					<div id="controls">
+
+						<div id="left">
+							<button title="prev" id="prev" class="ctrl-button"><i id="iPrev" class="material-icons">fast_rewind</i></button>
+							<button title="play" id="play" class="ctrl-button"><i id="iPlay" class="material-icons">play_arrow</i></button>
+							<button title="next" id="next" class="ctrl-button"><i id="iNext" class="material-icons">fast_forward</i></button>
+						</div>
+
+						<div id="middle">
+							<player-item></player-item>
+
+							<progress id="progressBar" value="0" max="100"></progress>
+							
+						</div>
+						
+						<div id="right">
+
+							<input id="fader" type="range" min="0" max="100" step="1" value="100"></input>
+							<button title="stop" id="stop" class="ctrl-button"><i id="iStop" class="material-icons">stop</i></button>
+							<button title="repeat song" id="loop" class="ctrl-button"><i id="iLoop" class="material-icons">loop</i></button>
+							<button title="mute" id="mute" class="ctrl-button"><i id="iMute" class="material-icons">volume_up</i></button>
+							<button title="repeat playlist" id="replay" class="ctrl-button"><i id="replay" class="material-icons">replay</i></button>
+
+						</div>
+												
+					</div>
+				</div>
+
+			</nav>
+
+			<div id="container">
+				<h3>Tracklist</h3>
+				<track-item v-for="item in tracks" v-bind:Artist="item.Artist" :Title="item.Title" :data-id="item.id">
+					
+				</track-item>	
+			</div>
+
+			<div id="footer">
+				
+			</div>
+
+		</div>
+		
+	</div> 
+	
+	<!-- //////////////////////// -->
+	<!-- /// Конец приложения /// -->
+	<!-- //////////////////////// -->
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="script1.js"></script>
+
+
+</body>
+</html>
